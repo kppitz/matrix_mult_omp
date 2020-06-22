@@ -1,1 +1,2 @@
 # matrix_mult_omp
+This project covers the optimization, algorithms, and parallelization used to solve matrix chain multiplication to show how it can be scaled up. Based on knowledge gained from using various tools to parallelize code, the matrix chain multiplication was parallelized using OpenMP. This project was implemented and tested on the Foundry, owned by Missouri University of Science and Technology. Testing consisted of randomized randomized matrix sets not shown in the code. Data gathered from the results show how the speed of the algorithm is affected. 
