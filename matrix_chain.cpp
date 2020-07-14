@@ -99,12 +99,12 @@ void matrixChain(const vector<vector<vector<int>>> &matrices, const vector<int> 
     vector<vector<int>> order(n, vector<int>(n));
     vector<vector<int>> sol;
 
-    cout<<"intitialize matrix"<<endl;
+    //cout<<"intitialize matrix"<<endl;
     //intitialize matrix
     for (i = 1; i < n; i++)
         m[i][i] = 0;
 
-    cout<<"cost of chain"<<endl;
+    cout<<"Calculating cost of multiplication chain"<<endl;
     //calculate cost of this multiplication chain
     for (l = 2; l < n; l++)
     {
@@ -128,7 +128,7 @@ void matrixChain(const vector<vector<vector<int>>> &matrices, const vector<int> 
             }
         }
     }
-    cout<<"finished calculations"<<endl;
+    //cout<<"Finished calculations"<<endl;
     //call multiply chain to calculate
     cout<<"Minimum number of multiplications: "<<m[1][n - 1]<<endl;
 

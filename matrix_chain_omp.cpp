@@ -108,7 +108,7 @@ long matrixChain(const vector<vector<vector<long>>> &matrices, const vector<int>
         m[i][i] = 0;
     }
 
-    //cout<<"cost of chain"<<endl;
+    //cout<<"Calculating cost of multiplication chain"<<endl;
     //calculate cost of this multiplication chain
     #pragma omp parallel for
         for (l = 2; l < n; l++)
@@ -138,6 +138,8 @@ long matrixChain(const vector<vector<vector<long>>> &matrices, const vector<int>
     //call multiply chain to calculate    
     #pragma omp parallel shared(matrices, order)
     sol = matrixMultiply(matrices, order, 1, n - 1);
+
+    //printSolution(sol);
 
     return m[1][n-1];
 }
